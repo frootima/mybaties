@@ -1,0 +1,286 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 349569024 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2657), pid=1751, tid=0x00007fb5537da700
+#
+# JRE version:  (8.0_181-b13) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.181-b13 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fb54c04b800):  JavaThread "Unknown thread" [_thread_in_vm, id=1756, stack(0x00007fb5536db000,0x00007fb5537db000)]
+
+Stack: [0x00007fb5536db000,0x00007fb5537db000],  sp=0x00007fb5537d94a0,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xacf34d]
+V  [libjvm.so+0x4fdeca]
+V  [libjvm.so+0x8c1838]
+V  [libjvm.so+0x8bbd4e]
+V  [libjvm.so+0xacc0f4]
+V  [libjvm.so+0x5eda0c]
+V  [libjvm.so+0xa6fcd4]
+V  [libjvm.so+0x5ee6bb]
+V  [libjvm.so+0x5df698]
+V  [libjvm.so+0xa98879]
+V  [libjvm.so+0xa98b12]
+V  [libjvm.so+0x62f885]
+V  [libjvm.so+0xa7b83e]
+V  [libjvm.so+0x6a9065]  JNI_CreateJavaVM+0x65
+C  [libjli.so+0x2ff7]
+C  [libpthread.so.0+0x7dd5]  start_thread+0xc5
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00007fb54c04b800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=1756, stack(0x00007fb5536db000,0x00007fb5537db000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 ca:02 8419736                            /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/bin/java
+00600000-00601000 r--p 00000000 ca:02 8419736                            /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/bin/java
+00601000-00602000 rw-p 00001000 ca:02 8419736                            /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/bin/java
+006a9000-006ca000 rw-p 00000000 00:00 0                                  [heap]
+e0c00000-eb2a0000 rw-p 00000000 00:00 0 
+7fb53d000000-7fb53d270000 rwxp 00000000 00:00 0 
+7fb53d270000-7fb54c000000 ---p 00000000 00:00 0 
+7fb54c000000-7fb54c071000 rw-p 00000000 00:00 0 
+7fb54c071000-7fb550000000 ---p 00000000 00:00 0 
+7fb550289000-7fb5502dd000 rw-p 00000000 00:00 0 
+7fb5502dd000-7fb550383000 ---p 00000000 00:00 0 
+7fb550383000-7fb55038e000 rw-p 00000000 00:00 0 
+7fb55038e000-7fb550744000 ---p 00000000 00:00 0 
+7fb550744000-7fb55074c000 r-xp 00000000 ca:02 16778152                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libzip.so
+7fb55074c000-7fb55094b000 ---p 00008000 ca:02 16778152                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libzip.so
+7fb55094b000-7fb55094c000 r--p 00007000 ca:02 16778152                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libzip.so
+7fb55094c000-7fb55094d000 rw-p 00008000 ca:02 16778152                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libzip.so
+7fb55094d000-7fb550959000 r-xp 00000000 ca:02 50810                      /usr/lib64/libnss_files-2.17.so
+7fb550959000-7fb550b58000 ---p 0000c000 ca:02 50810                      /usr/lib64/libnss_files-2.17.so
+7fb550b58000-7fb550b59000 r--p 0000b000 ca:02 50810                      /usr/lib64/libnss_files-2.17.so
+7fb550b59000-7fb550b5a000 rw-p 0000c000 ca:02 50810                      /usr/lib64/libnss_files-2.17.so
+7fb550b5a000-7fb550b60000 rw-p 00000000 00:00 0 
+7fb550b60000-7fb550b8e000 r-xp 00000000 ca:02 16778102                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libjava.so
+7fb550b8e000-7fb550d8d000 ---p 0002e000 ca:02 16778102                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libjava.so
+7fb550d8d000-7fb550d8e000 r--p 0002d000 ca:02 16778102                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libjava.so
+7fb550d8e000-7fb550d90000 rw-p 0002e000 ca:02 16778102                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libjava.so
+7fb550d90000-7fb550d9d000 r-xp 00000000 ca:02 16778151                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libverify.so
+7fb550d9d000-7fb550f9c000 ---p 0000d000 ca:02 16778151                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libverify.so
+7fb550f9c000-7fb550f9e000 r--p 0000c000 ca:02 16778151                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libverify.so
+7fb550f9e000-7fb550f9f000 rw-p 0000e000 ca:02 16778151                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/libverify.so
+7fb550f9f000-7fb550fa6000 r-xp 00000000 ca:02 50822                      /usr/lib64/librt-2.17.so
+7fb550fa6000-7fb5511a5000 ---p 00007000 ca:02 50822                      /usr/lib64/librt-2.17.so
+7fb5511a5000-7fb5511a6000 r--p 00006000 ca:02 50822                      /usr/lib64/librt-2.17.so
+7fb5511a6000-7fb5511a7000 rw-p 00007000 ca:02 50822                      /usr/lib64/librt-2.17.so
+7fb5511a7000-7fb5511bc000 r-xp 00000000 ca:02 113                        /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7fb5511bc000-7fb5513bb000 ---p 00015000 ca:02 113                        /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7fb5513bb000-7fb5513bc000 r--p 00014000 ca:02 113                        /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7fb5513bc000-7fb5513bd000 rw-p 00015000 ca:02 113                        /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7fb5513bd000-7fb5514be000 r-xp 00000000 ca:02 50800                      /usr/lib64/libm-2.17.so
+7fb5514be000-7fb5516bd000 ---p 00101000 ca:02 50800                      /usr/lib64/libm-2.17.so
+7fb5516bd000-7fb5516be000 r--p 00100000 ca:02 50800                      /usr/lib64/libm-2.17.so
+7fb5516be000-7fb5516bf000 rw-p 00101000 ca:02 50800                      /usr/lib64/libm-2.17.so
+7fb5516bf000-7fb5517a8000 r-xp 00000000 ca:02 51126                      /usr/lib64/libstdc++.so.6.0.19
+7fb5517a8000-7fb5519a7000 ---p 000e9000 ca:02 51126                      /usr/lib64/libstdc++.so.6.0.19
+7fb5519a7000-7fb5519af000 r--p 000e8000 ca:02 51126                      /usr/lib64/libstdc++.so.6.0.19
+7fb5519af000-7fb5519b1000 rw-p 000f0000 ca:02 51126                      /usr/lib64/libstdc++.so.6.0.19
+7fb5519b1000-7fb5519c6000 rw-p 00000000 00:00 0 
+7fb5519c6000-7fb5526ab000 r-xp 00000000 ca:02 5592                       /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/server/libjvm.so
+7fb5526ab000-7fb5528aa000 ---p 00ce5000 ca:02 5592                       /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/server/libjvm.so
+7fb5528aa000-7fb552958000 r--p 00ce4000 ca:02 5592                       /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/server/libjvm.so
+7fb552958000-7fb552982000 rw-p 00d92000 ca:02 5592                       /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/server/libjvm.so
+7fb552982000-7fb5529b4000 rw-p 00000000 00:00 0 
+7fb5529b4000-7fb552b77000 r-xp 00000000 ca:02 50792                      /usr/lib64/libc-2.17.so
+7fb552b77000-7fb552d76000 ---p 001c3000 ca:02 50792                      /usr/lib64/libc-2.17.so
+7fb552d76000-7fb552d7a000 r--p 001c2000 ca:02 50792                      /usr/lib64/libc-2.17.so
+7fb552d7a000-7fb552d7c000 rw-p 001c6000 ca:02 50792                      /usr/lib64/libc-2.17.so
+7fb552d7c000-7fb552d81000 rw-p 00000000 00:00 0 
+7fb552d81000-7fb552d83000 r-xp 00000000 ca:02 50798                      /usr/lib64/libdl-2.17.so
+7fb552d83000-7fb552f83000 ---p 00002000 ca:02 50798                      /usr/lib64/libdl-2.17.so
+7fb552f83000-7fb552f84000 r--p 00002000 ca:02 50798                      /usr/lib64/libdl-2.17.so
+7fb552f84000-7fb552f85000 rw-p 00003000 ca:02 50798                      /usr/lib64/libdl-2.17.so
+7fb552f85000-7fb552f93000 r-xp 00000000 ca:02 25166121                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/jli/libjli.so
+7fb552f93000-7fb553192000 ---p 0000e000 ca:02 25166121                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/jli/libjli.so
+7fb553192000-7fb553193000 r--p 0000d000 ca:02 25166121                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/jli/libjli.so
+7fb553193000-7fb553194000 rw-p 0000e000 ca:02 25166121                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre/lib/amd64/jli/libjli.so
+7fb553194000-7fb5531a9000 r-xp 00000000 ca:02 114517                     /usr/lib64/libz.so.1.2.7
+7fb5531a9000-7fb5533a8000 ---p 00015000 ca:02 114517                     /usr/lib64/libz.so.1.2.7
+7fb5533a8000-7fb5533a9000 r--p 00014000 ca:02 114517                     /usr/lib64/libz.so.1.2.7
+7fb5533a9000-7fb5533aa000 rw-p 00015000 ca:02 114517                     /usr/lib64/libz.so.1.2.7
+7fb5533aa000-7fb5533c1000 r-xp 00000000 ca:02 50818                      /usr/lib64/libpthread-2.17.so
+7fb5533c1000-7fb5535c0000 ---p 00017000 ca:02 50818                      /usr/lib64/libpthread-2.17.so
+7fb5535c0000-7fb5535c1000 r--p 00016000 ca:02 50818                      /usr/lib64/libpthread-2.17.so
+7fb5535c1000-7fb5535c2000 rw-p 00017000 ca:02 50818                      /usr/lib64/libpthread-2.17.so
+7fb5535c2000-7fb5535c6000 rw-p 00000000 00:00 0 
+7fb5535c6000-7fb5535e8000 r-xp 00000000 ca:02 50785                      /usr/lib64/ld-2.17.so
+7fb553691000-7fb5536d2000 rw-p 00000000 00:00 0 
+7fb5536d2000-7fb5536da000 rw-s 00000000 ca:02 21282758                   /tmp/hsperfdata_root/1751
+7fb5536da000-7fb5536de000 ---p 00000000 00:00 0 
+7fb5536de000-7fb5537e0000 rw-p 00000000 00:00 0 
+7fb5537e1000-7fb5537e5000 rw-p 00000000 00:00 0 
+7fb5537e5000-7fb5537e6000 r--p 00000000 00:00 0 
+7fb5537e6000-7fb5537e7000 rw-p 00000000 00:00 0 
+7fb5537e7000-7fb5537e8000 r--p 00021000 ca:02 50785                      /usr/lib64/ld-2.17.so
+7fb5537e8000-7fb5537e9000 rw-p 00022000 ca:02 50785                      /usr/lib64/ld-2.17.so
+7fb5537e9000-7fb5537ea000 rw-p 00000000 00:00 0 
+7ffc68513000-7ffc68534000 rw-p 00000000 00:00 0                          [stack]
+7ffc6858d000-7ffc6858f000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xms500m -Xmx500m -XX:PermSize=128m -XX:-UseGCOverheadLimit -Dapp.name=migrate -Dapp.pid=1751 -Dapp.repo=/var/lib/jenkins/mybatis-migrations-3.3.4/lib -Dapp.home=/var/lib/jenkins/mybatis-migrations-3.3.4 -Dbasedir=/var/lib/jenkins/mybatis-migrations-3.3.4 
+java_command: org.apache.ibatis.migration.Migrator status
+java_class_path (initial): /var/lib/jenkins/mybatis-migrations-3.3.4/lib/mybatis-3.4.6.jar:/var/lib/jenkins/mybatis-migrations-3.3.4/lib/mybatis-migrations-3.3.4.jar:/var/lib/jenkins/mybatis-migrations-3.3.4/etc:/var/lib/jenkins/mybatis-migrations-3.3.4/lib/mybatis-3.4.6.jar:/var/lib/jenkins/mybatis-migrations-3.3.4/lib/mybatis-migrations-3.3.4.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/var/lib/jenkins/mybatis-migrations-3.3.4/bin
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xacfe70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xacfe70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8bd000], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8bd000], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8bd000], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8bd000], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8bceb0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Red Hat Enterprise Linux Server release 7.5 (Maipo)
+
+uname:Linux 3.10.0-862.el7.x86_64 #1 SMP Wed Mar 21 18:14:51 EDT 2018 x86_64
+libc:glibc 2.17 NPTL 2.17 
+rlimit: STACK 8192k, CORE 0k, NPROC 3787, NOFILE 4096, AS infinity
+load average:0.01 0.13 0.13
+
+/proc/meminfo:
+MemTotal:        1013900 kB
+MemFree:          119868 kB
+MemAvailable:     269324 kB
+Buffers:            2088 kB
+Cached:           273988 kB
+SwapCached:            0 kB
+Active:           651928 kB
+Inactive:         150060 kB
+Active(anon):     526104 kB
+Inactive(anon):    12964 kB
+Active(file):     125824 kB
+Inactive(file):   137096 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:               144 kB
+Writeback:             0 kB
+AnonPages:        525944 kB
+Mapped:            52804 kB
+Shmem:             13140 kB
+Slab:              53980 kB
+SReclaimable:      28612 kB
+SUnreclaim:        25368 kB
+KernelStack:        2880 kB
+PageTables:         5788 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      506948 kB
+Committed_AS:     865748 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       12304 kB
+VmallocChunk:   34359717628 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    309248 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       45056 kB
+DirectMap2M:     1003520 kB
+
+
+CPU:total 1 (initial active 1) (1 cores per cpu, 1 threads per core) family 6 model 63 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, tsc, bmi1, bmi2
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+stepping	: 2
+microcode	: 0x3c
+cpu MHz		: 2400.124
+cache size	: 30720 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bogomips	: 4800.05
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 1013900k(119868k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.181-b13) for linux-amd64 JRE (1.8.0_181-b13), built on Jul 16 2018 11:32:17 by "mockbuild" with gcc 4.8.5 20150623 (Red Hat 4.8.5-28)
+
+time: Fri Aug 31 03:50:15 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
